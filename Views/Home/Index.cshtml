@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="ordenpaises">
+@for(int i = 0; i< ViewBag.Paises.Count; i++)
+{
+    <div class="pais">
+    <button><a href='@Url.Action("DetallePais",new{nombrePais = ViewBag.Paises[i].Nombre})'>Detalle del pais</a></button>
+    <img class="photo"src="@ViewBag.Paises[i].ImgBandera" alt="imagen de la bandera">
+    </div>
+}
+
+</div>
